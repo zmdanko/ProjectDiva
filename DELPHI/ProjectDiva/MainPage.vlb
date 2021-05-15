@@ -1,0 +1,16 @@
+﻿[]
+Coordinates=0,0,62,51
+Visible=True
+
+[BtnEditor]
+Coordinates=81,1,61,51
+
+[FireDACForm.FDQuery1]
+Visible=False
+
+[BtnRESTClient]
+Coordinates=62,70,87,51
+
+[Icon]
+Coordinates=180,1,54,33
+

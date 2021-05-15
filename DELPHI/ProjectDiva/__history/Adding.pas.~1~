@@ -1,0 +1,71 @@
+unit Adding;
+
+interface
+
+uses
+  System.Generics.Collections, System.SysUtils, System.Types, System.UITypes,
+  System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
+  FMX.Controls.Presentation, FMX.StdCtrls, REST.Types, REST.Client,
+  Data.Bind.Components, Data.Bind.ObjectScope;
+
+type
+  TAddingForm = class(TForm)
+    Commit: TButton;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
+    procedure CommitClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    constructor Create(AOwner: TComponent;
+      const KeysList: TList<String>); overload;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+procedure TAddingForm.CommitClick(Sender: TObject);
+var
+  RESTRequestParameterList: TRESTRequestParameterList;
+begin
+  RESTRequestParameterList := TRESTRequestParameterList.Create(self);
+  RESTRequestParameterList.AddItem('name', 'fuck');
+  self.RESTRequest1.Params := RESTRequestParameterList;
+  self.RESTRequest1.Execute;
+end;
+
+constructor TAddingForm.Create(AOwner: TComponent;
+  const KeysList: TList<String>);
+var
+  I: Integer;
+  newLabel: TLabel;
+  newEdit: TEdit;
+begin
+  inherited Create(AOwner);
+  for I := 0 to KeysList.Count - 1 do
+  begin
+    if (KeysList[I] <> 'id') then
+    begin
+      newLabel := TLabel.Create(self);
+      newLabel.Text := KeysList[I];
+      newLabel.Position := TPosition.Create
+        (TPointF.Create(self.Width div 8, 30 * I));
+
+      newEdit := TEdit.Create(self);
+      newEdit.Name := KeysList[I];
+      newEdit.Width := self.Width div 8 * 5;
+      newEdit.Position := TPosition.Create
+        (TPointF.Create(self.Width div 8 * 2, 30 * I));
+
+      self.AddObject(newLabel);
+      self.AddObject(newEdit);
+    end;
+  end;
+  self.Commit.Position := TPosition.Create
+    (TPointF.Create(self.Width div 8 * 2, 30 * I));
+end;
+
+end.

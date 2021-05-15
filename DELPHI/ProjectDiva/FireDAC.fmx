@@ -1,0 +1,110 @@
+object FireDACForm: TFireDACForm
+  Left = 0
+  Top = 0
+  Caption = 'FireDAC'
+  ClientHeight = 480
+  ClientWidth = 640
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    object BtnAdding: TCornerButton
+      Align = Left
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 69.565216064453130000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #28155#21152
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = BtnAddingClick
+    end
+    object BtnEdit: TCornerButton
+      Align = Left
+      Position.X = 69.565216064453130000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 70.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #20462#25913
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object BtnDelete: TCornerButton
+      Align = Left
+      Position.X = 139.565216064453100000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 75.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #21024#38500
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = BtnAddingClick
+    end
+    object BtnExport: TCornerButton
+      Align = Left
+      Position.X = 214.565216064453100000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 75.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #23548#20986
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+  end
+  object SelectAll: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 432.000000000000000000
+    Size.PlatformDefault = False
+    RowCount = 0
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 407.000000000000000000
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Password=root'
+      'Server=localhost'
+      'Database=ProjectDiva'
+      'DriverID=MSSQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 16
+    Top = 80
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 92
+    Top = 77
+    object LinkGridToDataSourceBindSourceDB: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = SelectAll
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = SelectAllQuery
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object SelectAllQuery: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM dbo.diva ORDER BY id')
+    Left = 312
+    Top = 232
+  end
+end

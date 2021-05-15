@@ -1,0 +1,5 @@
+inherited FilterForm_LgXhdpiPh: TFilterForm_LgXhdpiPh
+  ClientHeight = 425
+  ClientWidth = 720
+  DesignerMasterStyle = 3
+end

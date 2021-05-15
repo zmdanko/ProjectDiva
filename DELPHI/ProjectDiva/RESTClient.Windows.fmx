@@ -1,0 +1,7 @@
+inherited RESTClientForm_Windows: TRESTClientForm_Windows
+  DesignerMasterStyle = 0
+  inherited StringGrid1: TStringGrid
+    Viewport.Width = 558.000000000000000000
+    Viewport.Height = 384.000000000000000000
+  end
+end

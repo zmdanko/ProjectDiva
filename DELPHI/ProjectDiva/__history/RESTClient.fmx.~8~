@@ -1,0 +1,71 @@
+object RESTClientForm: TRESTClientForm
+  Left = 0
+  Top = 0
+  Caption = 'RESTClient'
+  ClientHeight = 480
+  ClientWidth = 558
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    CanParentFocus = True
+    ClipChildren = True
+    Size.Width = 558.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    RowCount = 0
+    Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, Tabs, Header, HeaderClick, AutoDisplacement]
+    OnHeaderClick = StringGrid1HeaderClick
+    Viewport.Width = 554.000000000000000000
+    Viewport.Height = 415.000000000000000000
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 558.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    object AddBtn: TButton
+      Align = Left
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Add'
+      OnClick = AddBtnClick
+    end
+    object UpdateBtn: TButton
+      Align = Left
+      Position.X = 100.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Update'
+      OnClick = UpdateBtnClick
+    end
+    object RemoveBtn: TButton
+      Align = Left
+      Position.X = 200.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Remove'
+      OnClick = RemoveBtnClick
+    end
+    object ExportBtn: TButton
+      Align = Left
+      Position.X = 300.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Export'
+      OnClick = ExportBtnClick
+    end
+  end
+  object ADOConnection1: TADOConnection
+    Left = 264
+    Top = 224
+  end
+end

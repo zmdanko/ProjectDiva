@@ -1,0 +1,119 @@
+object EditorForm: TEditorForm
+  Left = 274
+  Top = 68
+  Caption = 'editor'
+  ClientHeight = 303
+  ClientWidth = 553
+  Position = Default
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Left = 274
+  Top = 68
+  DesignerMasterStyle = 0
+  object StatusBar: TStatusBar
+    Position.Y = 281.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 553.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object FCount: TLabel
+      Position.Y = 5.000000000000000000
+    end
+  end
+  object Editor: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    OnChange = EditorChange
+    OnChangeTracking = EditorChange
+    Align = Client
+    Size.Width = 553.000000000000000000
+    Size.Height = 281.000000000000000000
+    Size.PlatformDefault = False
+    Viewport.Width = 553.000000000000000000
+    Viewport.Height = 281.000000000000000000
+  end
+  object Menu: TMainMenu
+    Left = 96
+    Top = 64
+    object MFile: TMenuItem
+      Text = 'File'
+      object MOpen: TMenuItem
+        Action = AOpen
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object MSave: TMenuItem
+        Action = ASave
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+    end
+    object MFormat: TMenuItem
+      Text = 'format'
+      object MASCII: TMenuItem
+        Action = AASCII
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object MUTF8: TMenuItem
+        Action = AUTF8
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object CheckBox1: TCheckBox
+        Position.X = -70.000000000000000000
+        Position.Y = 31.000000000000000000
+        Text = 'CheckBox1'
+      end
+      object CheckBox2: TCheckBox
+        Position.X = -70.000000000000000000
+        Position.Y = 31.000000000000000000
+        Text = 'CheckBox1'
+      end
+    end
+  end
+  object SaveDialog: TSaveDialog
+    DefaultExt = 'txt'
+    Left = 520
+    Top = 248
+  end
+  object OpenDialog: TOpenDialog
+    Left = 488
+    Top = 248
+  end
+  object ActionList: TActionList
+    Left = 576
+    Top = 16
+    object ASave: TAction
+      Category = 'ACFile'
+      Text = 'save'
+      OnExecute = ASaveExecute
+    end
+    object AOpen: TAction
+      Category = 'ACFile'
+      Text = 'open'
+      OnExecute = AOpenExecute
+    end
+    object AUTF8: TAction
+      Category = 'ACFormat'
+      Text = 'utf8'
+      OnExecute = AEncodingExecute
+    end
+    object AASCII: TAction
+      Category = 'ACFormat'
+      Text = 'ascii'
+      OnExecute = AEncodingExecute
+    end
+  end
+  object ActionList1: TActionList
+    Left = 448
+    Top = 248
+  end
+end

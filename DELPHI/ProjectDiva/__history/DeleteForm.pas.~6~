@@ -1,0 +1,46 @@
+unit DeleteForm;
+
+interface
+
+uses
+  RESTForm, System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation;
+
+type
+  TDeleteForm = class(TRESTForm)
+    NoBtn: TButton;
+    YesBtn: TButton;
+    Label1: TLabel;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    constructor Create(AOwner: TComponent; Path: string;
+      PrimaryKey: string); overload;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+constructor TDeleteForm.Create(AOwner: TComponent; Path: string;
+  PrimaryKey: string);
+begin
+  inherited Create(AOwner, Path);
+
+  self.Label1.Text := 'Sure delete ' + PrimaryKey;
+end;
+
+procedure TDeleteForm.FormCreate(Sender: TObject);
+begin
+  self.Label1.Position := TPosition.Create(TPointF.Create(self.Width div 4,
+    self.Height div 5));
+  self.YesBtn.Position := TPosition.Create(TPointF.Create(self.Width div 4,
+    self.Height div 5 * 3));
+  self.NoBtn.Position := TPosition.Create(TPointF.Create(self.Width div 4 * 2,
+    self.Height div 5 * 3));
+end;
+
+end.

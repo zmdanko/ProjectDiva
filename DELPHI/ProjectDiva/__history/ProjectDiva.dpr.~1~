@@ -1,0 +1,18 @@
+program ProjectDiva;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  MainPage in 'MainPage.pas' {MainPageForm},
+  Editor in 'Editor.pas' {EditorForm},
+  RESTClient in 'RESTClient.pas' {RESTClientForm},
+  Adding in 'Adding.pas' {AddingForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainPageForm, MainPageForm);
+  Application.Run;
+
+end.

@@ -1,0 +1,35 @@
+object FilterForm: TFilterForm
+  Left = 0
+  Top = 0
+  Caption = 'FilterForm'
+  ClientHeight = 93
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object ComboBox1: TComboBox
+    HelpType = htKeyword
+    Position.X = 22.000000000000000000
+    Position.Y = 17.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Position.X = 208.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 361.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Commit: TButton
+    Position.X = 224.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Commit'
+    OnClick = CommitClick
+  end
+end

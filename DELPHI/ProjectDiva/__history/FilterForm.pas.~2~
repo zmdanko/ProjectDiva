@@ -1,0 +1,61 @@
+unit FilterForm;
+
+interface
+
+uses
+  RESTClient, System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ListBox,
+  FMX.Controls.Presentation, FMX.Edit;
+
+const
+  POSITION_X_WIDTH_DIV = 8;
+  POSITION_Y = 30;
+
+type
+  TFilterForm = class(TForm)
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    procedure FormCreate(Sender: TObject);
+  private
+    procedure CreateForm;
+    procedure SettingComboBox;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFilterForm.FormCreate(Sender: TObject);
+begin
+  CreateForm();
+  SettingComboBox();
+end;
+
+procedure TFilterForm.CreateForm();
+begin
+  self.ComboBox1.Position := TPosition.Create
+    (TPointF.Create(self.Width div POSITION_X_WIDTH_DIV, POSITION_Y));
+  self.Edit1.Width := self.Width div POSITION_X_WIDTH_DIV * 5;
+  self.Edit1.Position := TPosition.Create
+    (TPointF.Create(self.Width div POSITION_X_WIDTH_DIV * 2.5, POSITION_Y));
+end;
+
+procedure TFilterForm.SettingComboBox();
+var
+  Key: string;
+  ListBoxItem: TListBoxItem;
+begin
+  for Key in (self.Owner as TRESTClientForm).PKeysList do
+  begin
+    ListBoxItem := TListBoxItem.Create(self.ComboBox1);
+    ListBoxItem.Name := Key;
+    ListBoxItem.Text := Key;
+    self.ComboBox1.AddObject(ListBoxItem);
+  end;
+end;
+
+end.

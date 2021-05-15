@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: downloader
+  config:
+    import: optional:configserver:http://localhost:9100
+
+

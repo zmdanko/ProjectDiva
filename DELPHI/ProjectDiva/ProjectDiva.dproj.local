@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/02/04 02:17:38.000.989,D:\Delphi\source\Project1.dproj=D:\Delphi\source\ProjectDiva.dproj</Transaction>
+    <Transaction>2021/02/04 02:18:13.000.873,D:\Delphi\source\Unit1.fmx=D:\Delphi\source\MainPage.fmx</Transaction>
+    <Transaction>2021/02/04 02:19:58.000.436,D:\Delphi\source\MainPage.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\MainPage.fmx</Transaction>
+    <Transaction>2021/02/04 02:19:59.000.788,D:\Delphi\source\ProjectDiva.dproj=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\ProjectDiva.dproj</Transaction>
+    <Transaction>2021/02/04 02:37:56.000.956,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Editor.fmx</Transaction>
+    <Transaction>2021/02/06 09:38:25.000.861,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.dfm=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\FireDAC.dfm</Transaction>
+    <Transaction>2021/02/08 14:23:53.000.051,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\FireDAC.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.fmx</Transaction>
+    <Transaction>2021/02/09 11:30:27.000.111,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Adding.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.fmx</Transaction>
+    <Transaction>2021/03/03 02:42:46.000.701,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\RESTClient1.fmx</Transaction>
+    <Transaction>2021/03/03 02:42:46.000.701,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\Unit1.pas=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\RESTClient1.pas</Transaction>
+    <Transaction>2021/03/03 02:44:14.000.042,D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\RESTClient1.fmx=D:\Delphi\source\ProjectDiva\ProjectDiva\trunk\RESTClient.fmx</Transaction>
+    <Transaction>2021/03/25 03:21:11.000.238,D:\develop\ProjectDiva\DELPHI\ProjectDiva\Adding.fmx=D:\develop\ProjectDiva\DELPHI\ProjectDiva\Post.fmx</Transaction>
+    <Transaction>2021/03/25 03:21:11.000.237,D:\develop\ProjectDiva\DELPHI\ProjectDiva\Adding.pas=D:\develop\ProjectDiva\DELPHI\ProjectDiva\Post.pas</Transaction>
+    <Transaction>2021/03/25 03:29:16.000.318,D:\develop\ProjectDiva\DELPHI\ProjectDiva\Post.fmx=D:\develop\ProjectDiva\DELPHI\ProjectDiva\FormPost.fmx</Transaction>
+    <Transaction>2021/03/31 04:00:50.000.909,D:\develop\ProjectDiva\DELPHI\ProjectDiva\Unit1.fmx=D:\develop\ProjectDiva\DELPHI\ProjectDiva\DeleteForm.fmx</Transaction>
+    <Transaction>2021/04/26 05:05:20.000.579,D:\develop\ProjectDiva\DELPHI\ProjectDiva\Unit1.fmx=D:\develop\ProjectDiva\DELPHI\ProjectDiva\FilterForm.fmx</Transaction>
+    <Transaction>2021/04/28 00:31:09.000.160,D:\develop\ProjectDiva\DELPHI\ProjectDiva1\ProjectDiva.dproj=D:\develop\ProjectDiva\DELPHI\ProjectDiva1\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64=""/>
+	</ActiveMobileDevice>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

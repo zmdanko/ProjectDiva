@@ -1,0 +1,5 @@
+inherited DeleteForm_LgXhdpiPh: TDeleteForm_LgXhdpiPh
+  ClientHeight = 425
+  ClientWidth = 720
+  DesignerMasterStyle = 3
+end
